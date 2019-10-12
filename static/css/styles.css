@@ -1,0 +1,30 @@
+html, body {
+    margin: 0;
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header, footer {
+    flex: 0 0 auto;
+    width: 100%;
+    margin: 0;
+}
+
+#content {
+    flex: 1 0 auto;
+    width: 100%;
+}
+
+#game {
+    text-align: center;
+}
+
+.name {
+    text-align: center;
+    font-size: 3rem;
+}
