@@ -4,14 +4,32 @@
     <title>Мафия</title>
     <meta charset="utf-8"/>
     <link href="../static/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="../static/js/home.js"></script>
 </head>
 <body>
 <header>
-    <!-- Logo -->
+    <img alt="Logo" id="logo" src="../static/img/hat.png">
     <h1 class="name">BrowserMafia</h1>
 </header>
 <div id='content'>
-    <h1 id="game">GAME</h1>
+    <div class="description"></div>
+    <div class="form">
+        <div id="loginField">
+            <label for="userName">Имя пользователя</label>
+            <input id="userName" type="text">
+        </div>
+        <div id="passwordField">
+            <label for="password">Пароль</label>
+            <input id="password" type="password">
+        </div>
+        <div class="buttonGroup">
+            <div class="button" id="loginButton">
+                Вход
+            </div>
+            <a class="button" href="/signUp" id="signUpButton">Регистрация</a>
+        </div>
+    </div>
 </div>
 <footer>
     <h4>Develop by Artem58 and Havlong</h4>

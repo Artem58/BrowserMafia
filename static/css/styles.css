@@ -4,6 +4,10 @@ html, body {
     height: 100%;
 }
 
+* {
+    box-sizing: border-box
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -13,11 +17,14 @@ header, footer {
     flex: 0 0 auto;
     width: 100%;
     margin: 0;
+    padding: 1rem;
 }
 
 #content {
     flex: 1 0 auto;
     width: 100%;
+    display: flex;
+    flex-direction: row;
 }
 
 #game {
@@ -27,4 +34,52 @@ header, footer {
 .name {
     text-align: center;
     font-size: 3rem;
+    margin: 1rem;
 }
+
+header {
+    background-color: rgba(255, 226, 114, 0.51);
+    display: flex;
+    flex-direction: row;
+}
+
+.buttonGroup {
+    display: flex;
+    flex-direction: row;
+}
+
+.button {
+    background-color: #ffb07c;
+    border-radius: .5rem;
+    padding: .5rem;
+    color: black;
+    text-decoration: none;
+}
+
+.button:hover {
+    background-color: #ff6469;
+    cursor: pointer;
+}
+
+.description {
+    flex: 1 0 auto;
+}
+
+.form {
+    flex: 0 0 auto;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 49, 44, 0.84);
+    border-radius: 1rem;
+    margin: 2rem;
+    height: fit-content;
+    text-align: right;
+}
+
+.form * {
+    font-weight: bolder;
+    margin: .2rem;
+    font-size: 1.5rem;
+}
+
+
