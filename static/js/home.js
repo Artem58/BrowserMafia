@@ -2,7 +2,21 @@
 
 $(document).ready(function () {
     $('#loginButton').click(function () {
-        alert("You logged in\nUsername is " + $('#userName').val() + "\nPassword is " + $('#password').val());
+        let jsonData = JSON.stringify({
+            'user': $('#userName').val(),
+            'password': $('#password').val()
+        });
+        $.ajax({
+            url: '/verifyUser',
+            type: 'POST',
+            contentType: 'application/json',
+            data: jsonData,
+            success: function (jsonResult) {
+                let tokenObject = JSON.parse(jsonResult);
+                document.cookie = "token=" + tokenObject.token.toString();
+                window.location.href = window.location.href + "chooseGame";
+            }
+        })
     });
     $('footer').css(
         {
