@@ -14,7 +14,7 @@ $(document).ready(function () {
             success: function (jsonResult) {
                 let tokenObject = JSON.parse(jsonResult);
                 document.cookie = "token=" + tokenObject.token.toString();
-                window.location.href = window.location.href + "chooseGame";
+                window.location.href = '/chooseGame';
             }
         })
     });

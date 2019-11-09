@@ -1,10 +1,54 @@
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
     <title>Регистрация</title>
+    <meta charset="utf-8"/>
+    <link href="/static/css/styles.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="/static/js/signUp.js"></script>
 </head>
 <body>
-
+<header>
+    <img alt="Logo" id="logo" src="../static/img/hat.png">
+    <h1 class="name">Medieval Wars</h1>
+</header>
+<div id='content'>
+    <div class="description">
+        <div class="innerDescription">
+            <p>Войдите на величайшее побоище Средних Веков</p>
+            <p>Приготовтесь к предательству и попробуйте обмануть противника</p>
+            <p>В игре вас ждёт уникальный геймплей за одну из трёх сторон конфликта со своими шестью уникальными
+                классами</p>
+        </div>
+    </div>
+    <div class="form">
+        <div id="nameField">
+            <label for="name">Ваше Имя</label>
+            <input id="name" type="text">
+        </div>
+        <div id="surNameField">
+            <label for="surName">Ваша Фамилия</label>
+            <input id="surName" type="text">
+        </div>
+        <div id="loginField">
+            <label for="userName">Имя пользователя</label>
+            <input id="userName" type="text">
+        </div>
+        <div id="passwordField">
+            <label for="password">Пароль</label>
+            <input id="password" type="password">
+        </div>
+        <div>
+            <div class="button" id="registerButton" style="margin: auto">
+                Регистрация
+            </div>
+        </div>
+    </div>
+</div>
+<footer>
+    <h4>Developed by Artem58 and Havlong</h4>
+    <h4>Github: <a href="https://github.com/Artem58/BrowserMafia">BrowserMafia</a></h4>
+    <h4>ServerTime: {{ serverTime }}</h4>
+</footer>
 </body>
 </html>

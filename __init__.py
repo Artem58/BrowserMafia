@@ -5,6 +5,7 @@ from random import randint
 
 from flask import Flask
 from flask import abort
+from flask import redirect
 from flask import render_template
 from flask import request
 
@@ -24,9 +25,18 @@ def index():
     return render_template('index.html', serverTime=str(datetime.now()).split('.')[0])
 
 
-@app.route('/signUp')
+@app.route('/signUp', methods=['GET'])
 def signUp():
     return render_template('signUp.html')
+
+
+@app.route('/signUp', methods=['POST'])
+def register():
+    userData = loads(request.data)
+    if userData['user'] in userDB:
+        abort(404)
+    userDB[userData['user']] = userData['password']
+    return redirect('/')
 
 
 @app.route('/chooseGame')
@@ -60,6 +70,8 @@ def verifyUser():
         t = str(randint(0, 1023))
         tokenDB.append(t)
         return dumps({"token": t})
+    else:
+        abort(404)
 
 
 if __name__ == "__main__":
